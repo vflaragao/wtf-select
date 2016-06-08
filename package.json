@@ -1,7 +1,7 @@
 {
   "name": "select",
   "version": "1.0.0",
-  "description": "Custom material select based in angular2-material input component"
+  "description": "Custom material select based in angular2-material input component",
   "scripts": { },
   "license": "ISC",
   "peerDependencies": {
