@@ -1,0 +1,10 @@
+{
+  "name": "select",
+  "version": "1.0.0",
+  "description": "Custom material select based in angular2-material input component"
+  "scripts": { },
+  "license": "ISC",
+  "peerDependencies": {
+    "@angular2-material/core": "2.0.0-alpha.5-2"
+  }
+}

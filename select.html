@@ -1,0 +1,64 @@
+<div class="md-input-wrapper"
+  tabindex="-1"
+  (focus)="handleSelectFocus()">
+  <div class="md-input-table">
+    <div class="md-input-prefix"><ng-content select="[md-prefix]"></ng-content></div>
+
+    <div class="md-input-infix">
+      <input [(ngModel)]="value"
+        hidden="true">
+      <input #input
+        aria-target
+        class="md-input-element"
+        type="text" 
+        readonly="true"
+        [class.md-unfocus]="!focused"
+        (focus)="handleFocus($event)"
+        (blur)="handleBlur($event)"
+        [value]="option.label">
+
+      <label class="md-input-placeholder"
+        [attr.for]="inputId"
+        [class.md-empty]="empty"
+        [class.md-focused]="focused"
+        [class.md-float]="floatingPlaceholder"
+        [class.md-accent]="dividerColor == 'accent'"
+        [class.md-warn]="dividerColor == 'warn'"
+        *ngIf="hasPlaceholder()">
+      <ng-content select="md-placeholder"></ng-content>
+      {{placeholder}}
+      <span class="md-placeholder-required" *ngIf="required">*</span>
+    </label>
+  </div>
+
+  <div class="md-input-suffix">
+    <ng-content select="[md-suffix]"></ng-content>
+  </div>
+  <div class="md-select-arrow">
+    <span class="md-select-icon"
+      [class.md-unfocus]="!focused"></span>
+  </div>
+</div>
+
+<div class="md-input-underline"
+  [class.md-disabled]="disabled">
+  <span class="md-input-ripple"
+    [class.md-focused]="focused"
+    [class.md-accent]="dividerColor == 'accent'"
+    [class.md-warn]="dividerColor == 'warn'"></span>
+    <div class="md-select-menu-container"
+      [class.md-leave]="!selected"
+      [class.md-active]="selected">
+      <div class="md-select-menu">
+        <div class="md-content">
+          <div class="md-option" *ngFor="let opt of options" (click)="handleSelect(opt)">
+            <span>{{opt.label}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="hintLabel != ''" class="md-hint">{{hintLabel}}</div>
+  <ng-content select="md-hint"></ng-content>
+</div>
