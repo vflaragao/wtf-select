@@ -1,16 +1,16 @@
 # Wtf-select
----
+
 It's a simple select component based in angular2-material [input component](https://github.com/angular/material2/tree/master/src/components/input).
 
 Version: 1.0.0
-### Installation
----
+## Installation
+
 Run following command:
 ```sh
 $ npm install wtf-select
 ```
-### Usage
----
+## Usage
+
 Now, u can make simple forms by using of material select tags.
 
 ```html
@@ -21,8 +21,8 @@ Now, u can make simple forms by using of material select tags.
 </md-select>
 ...
 ```
-### Notes
----
+## Notes
+
 The md-option label ~~*cannot*~~ be used between `<md-option>` tags. It should be like as shown above.
 ```html
 <!-- It's still does not work :( -->
