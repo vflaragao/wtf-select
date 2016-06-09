@@ -5,7 +5,7 @@ It's a simple select component based in angular2-material [input component](http
 Version: 1.0.0
 ## Installation
 
-Run following command:
+Run the following command:
 ```sh
 $ npm install wtf-select
 ```
