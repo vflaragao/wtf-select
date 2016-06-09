@@ -23,8 +23,12 @@ Now, u can make simple forms by using of material select tags.
 ```
 ## Notes
 
-The md-option label ~~*cannot*~~ be used between `<md-option>` tags. It should be like as shown above.
+The md-option's label attribute cannot be used inside of md-option tag. It should be like as shown above.
+
 ```html
-<!-- It's still does not work :( -->
+<!-- Instead of: -->
 <md-option [value]="UR_VALUE">UR_LABEL</md-option>
+
+<!-- Use: -->
+<md-option [value]="UR_VALUE" [label]="UR_LABEL"></md-option>
 ```
