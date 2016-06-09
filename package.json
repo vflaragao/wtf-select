@@ -1,10 +1,22 @@
 {
-  "name": "select",
+  "name": "wtf-select",
   "version": "1.0.0",
+  "author": "Victor Frazão <vflaragao@gmail.com>",
   "description": "Custom material select based in angular2-material input component",
-  "scripts": { },
+  "scripts": {},
+  "main": "select.js",
   "license": "ISC",
-  "peerDependencies": {
-    "@angular2-material/core": "2.0.0-alpha.5-2"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vflaragao/wtf-select.git"
+  },
+  "keywords": [
+    "material-design",
+    "select",
+    "angular2-material"
+  ],
+  "bugs": {
+    "url": "https://github.com/vflaragao/wtf-select/issues"
+  },
+  "homepage": "https://github.com/vflaragao/wtf-select#readme"
 }
