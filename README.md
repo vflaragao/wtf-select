@@ -2,7 +2,7 @@
 
 It's a simple select component based in angular2-material [input component](https://github.com/angular/material2/tree/master/src/components/input).
 
-Version: 1.0.0
+Version: 1.0.1
 ## Installation
 
 Run the following command:

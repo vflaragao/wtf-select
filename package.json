@@ -1,6 +1,6 @@
 {
   "name": "wtf-select",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Victor Frazão <vflaragao@gmail.com>",
   "description": "Custom material select based in angular2-material input component",
   "scripts": {},
