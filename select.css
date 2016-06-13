@@ -276,5 +276,7 @@
 }
 
 :host .hide {
-  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  text-overflow: hidden;
 }

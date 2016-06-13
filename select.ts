@@ -143,6 +143,7 @@ export class MdSelect implements ControlValueAccessor, AfterContentInit, OnChang
 	get inputId(): string { return `${this.id}-input`; }
 	get option(): any { return this._option; }
 	get options(): any { return this._options; }
+	get hide(): boolean { return (this._value == undefined || this._value == '') }
 
 	/**
 	 * Bindings.
