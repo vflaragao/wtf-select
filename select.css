@@ -33,7 +33,10 @@
   font-family: Roboto, "Helvetica Neue", sans-serif;
   text-align: left; }
   :host .md-input-wrapper {
-    margin: 16px 0; }
+    margin: 16px 0; 
+    width: 100% }
+  :host .md-input-wrapper:focus {
+    outline: 0;}
   :host .md-input-table {
     display: inline-table;
     -webkit-flex-flow: column;
@@ -162,6 +165,10 @@
   right: 0;
 }
 
+:host .md-select-arrow:focus {
+  outline: 0;
+}
+
 :host .md-select-icon {
     display: block;
     -webkit-align-items: flex-end;
@@ -185,9 +192,9 @@
 
 :host .md-select-menu-container {
     position: fixed;
+    z-index: 90;
     left: 0;
     top: 0;
-    z-index: 90;
     opacity: 0;
     display: none;
 }
@@ -218,6 +225,9 @@
 }
 
 :host .md-select-menu {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;

@@ -1,6 +1,7 @@
 <div class="md-input-wrapper"
   tabindex="-1"
-  (focus)="handleSelectFocus()">
+  (focus)="handleSelectFocus()"
+  (blur)="handleSelectBlur()">
   <div class="md-input-table">
     <div class="md-input-prefix"><ng-content select="[md-prefix]"></ng-content></div>
 
@@ -13,7 +14,7 @@
         type="text" 
         readonly="true"
         [class.md-unfocus]="!focused"
-        (focus)="handleFocus($event)"
+        (click)="handleClick($event)"
         (blur)="handleBlur($event)"
         [value]="option.label">
 
@@ -34,7 +35,10 @@
   <div class="md-input-suffix">
     <ng-content select="[md-suffix]"></ng-content>
   </div>
-  <div class="md-select-arrow">
+  <div class="md-select-arrow"
+    tabindex="-1"
+    (click)="handleClick($event)"
+    (blur)="handleBlur($event)">
     <span class="md-select-icon"
       [class.md-unfocus]="!focused"></span>
   </div>

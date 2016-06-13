@@ -103,7 +103,7 @@ export class MdOption {
 	templateUrl: './select.html',
 	styleUrls: ['./select.css'],
 	providers: [MD_INPUT_CONTROL_VALUE_ACCESSOR],
-	host: { '(click)': 'focus()' }
+	/*host: { '(click)': 'focus()' }*/
 })
 export class MdSelect implements ControlValueAccessor, AfterContentInit, OnChanges {
 	private _focused: boolean = false;
@@ -222,6 +222,13 @@ export class MdSelect implements ControlValueAccessor, AfterContentInit, OnChang
 		this._focused = true;
 		this._selected = this._selected ? false : true;
 		this._focusEmitter.emit(event);
+		console.log('focus', this._selected);
+	}
+
+	handleClick(event: FocusEvent) {
+		this._focused = true;
+		this._selected = this._selected ? false : true;
+		console.log('click', this._selected);
 	}
 
 	/** @internal */
@@ -230,15 +237,26 @@ export class MdSelect implements ControlValueAccessor, AfterContentInit, OnChang
 		this._selected = false;
 		this._onTouchedCallback();
 		this._blurEmitter.emit(event);
+		console.log('blur', this._selected);
 	}
 
 	handleSelect(option: MdOption ) {
 		this.value = option.value;
+		this._selected = false;
+		this._focused = true;
 		this._onTouchedCallback();
+		console.log('selecting', this._selected);
 	}
 
 	handleSelectFocus() {
 		this._selected = true;
+		console.log('focus select', this._selected);
+	}
+
+	handleSelectBlur() {
+		this._focused = false;
+		this._selected = false;
+		console.log('select blur');
 	}
 
 	/** @internal */
