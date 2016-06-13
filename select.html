@@ -13,6 +13,7 @@
         class="md-input-element"
         type="text" 
         readonly="true"
+        [class.hide]="value == undefined"
         [class.md-unfocus]="!focused"
         (click)="handleClick($event)"
         (blur)="handleBlur($event)"

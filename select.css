@@ -274,3 +274,7 @@
 :host .md-input-wrapper:active {
  outline: 0px;
 }
+
+:host .hide {
+  color: transparent;
+}
